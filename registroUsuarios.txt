@@ -1,0 +1,14 @@
+
+Orlando,25,1006465213,Adolecente,MiniMurloc
+Camilo ,23,1006465213,Adolecente,MiniMurloc
+Daniel,28,10064658,Adolecente,HechizoVeloz
+Anduin,11,1234234",Niño,MiniMurloc
+Murky,10,1001110002",Niño,"HechizoVeloz
+Magni,12,1001110003,Niño,ReyLich
+Jaina,19,1002220001,Joven,MiniMurloc
+Thrall,22,1002220002,Joven,HechizoVeloz
+Valeera,20,1002220003,Joven,ReyLich
+Arthas,35,1003330001,Adulto,MiniMurloc
+Illidan,38,1003330002,Adulto,HechizoVeloz
+Uther,45,1003330003,Adulto,ReyLich
+Orlando,25,1006465217,Niño,MiniMurloc
