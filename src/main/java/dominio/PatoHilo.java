@@ -42,10 +42,9 @@ public class PatoHilo extends Thread{
                 break;
             }
             }
-        //Al terminar el bucle, llama al método de la ventana
+        //Al terminar el bucle, llama al método de la ventan
         ventana.registrarGanador(this.nombre);
         }
-
 
 
 

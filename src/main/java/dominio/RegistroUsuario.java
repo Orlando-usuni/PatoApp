@@ -26,7 +26,7 @@ public class RegistroUsuario {
 
     }
 
-
+    
 
     public String getNombre() {
         return nombre;

@@ -15,10 +15,10 @@ public class AppPatos {
         ManejoArchivos manejoArchivos = new ManejoArchivos();
         manejoArchivos.CrearDocumento("registroUsuarios.txt");
         manejoArchivos.leerUsuariosDesdeTxt("registroUsuarios.txt");
-
         FlatLaf.setup(new FlatDarculaLaf());
         Inicio ventaInicio = new Inicio();
         ventaInicio.MostrarVentana();
+
 
 
 

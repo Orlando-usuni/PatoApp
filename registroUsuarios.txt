@@ -1,5 +1,3 @@
-
-Orlando,25,1006465213,Adolecente,MiniMurloc
 Camilo ,23,1006465213,Adolecente,MiniMurloc
 Daniel,28,10064658,Adolecente,HechizoVeloz
 Anduin,11,1234234",Niño,MiniMurloc
@@ -11,4 +9,6 @@ Valeera,20,1002220003,Joven,ReyLich
 Arthas,35,1003330001,Adulto,MiniMurloc
 Illidan,38,1003330002,Adulto,HechizoVeloz
 Uther,45,1003330003,Adulto,ReyLich
-Orlando,25,1006465217,Niño,MiniMurloc
+
+Orlando,25,1006465223,Niño,MiniMurloc
+Luz pierdad,78,56468494131,Adolecente,MiniMurloc

@@ -4,6 +4,7 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLaf;
 import dominio.PatoHilo;
 import dominio.RegistrarCarrera;
+import dominio.RegistrarPato;
 import dominio.RegistroUsuario;
 import servicios.ServicioListaUsuario;
 
@@ -33,6 +34,16 @@ public class VentanaCarrera {
     String categoria;
     private ArrayList<RegistroUsuario> listaSeleccion;
 
+
+    public void patoVeloz12(String patoGanador){
+        for(RegistrarPato pato : servicioListaUsuario.getListaPatos()){
+            if(pato.getNombre().equals(patoGanador)){
+                pato.llevarGanancia();
+
+            }
+        }
+    }
+
     // 1. Variable para controlar si ya hay un ganador
     private String nombreGanador = null;
 
@@ -40,8 +51,13 @@ public class VentanaCarrera {
     public synchronized void registrarGanador(String nombre) {
         if (this.nombreGanador == null) {
             this.nombreGanador = nombre;
+            patoVeloz12(nombre);
             JlabelGanadorv1.setText( "Ganador: "+nombreGanador);
             JPanelMedallas.setVisible(true);
+            if(nombre.equals("MiniMurloc")){
+
+            }
+
 
         }
     }
@@ -69,6 +85,7 @@ public class VentanaCarrera {
             }
         });
     }
+
 
     public void obtenerJugadores(){
         Random random = new Random();
@@ -103,6 +120,7 @@ public class VentanaCarrera {
         jLabeljugador3.setText(nombres[2]);
 
 
+
     }
 
     public void nombreCarrera(String nombre){
@@ -131,6 +149,8 @@ public class VentanaCarrera {
         frame.setSize(500, 600);
 
         frame.setVisible(true);
+
+
     }
 
 

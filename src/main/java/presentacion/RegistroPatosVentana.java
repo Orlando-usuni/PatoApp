@@ -22,11 +22,7 @@ public class RegistroPatosVentana {
 
 
 
-    public void  agregarPato(String nombre){
-        comboBoxNPato.addItem(nombre);
-        comboBoxNPato.addItem("Panda");
 
-    }
 
     public RegistroPatosVentana() {
         btnRegistrar.addActionListener(new ActionListener() {

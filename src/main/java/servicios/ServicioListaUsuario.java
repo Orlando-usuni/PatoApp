@@ -1,7 +1,7 @@
 package servicios;
 
 import dominio.RegistrarCarrera;
-import dominio.RegistroPato;
+import dominio.RegistrarPato;
 import dominio.RegistroUsuario;
 
 import java.util.ArrayList;
@@ -9,14 +9,11 @@ import java.util.ArrayList;
 public  class ServicioListaUsuario {
     static ArrayList<RegistroUsuario> listaUsuarios = new ArrayList<>();
     static ArrayList<RegistrarCarrera> listCMapasCarrera = new ArrayList<>();
-    static ArrayList<RegistroPato> listaPatos = new ArrayList<>();
+    static ArrayList<RegistrarPato> listPatos = new ArrayList<>();
 
-
-    public ArrayList<RegistroPato> getListaPatos(){
-        return listaPatos;
+    public ArrayList<RegistrarPato> getListaPatos(){
+        return listPatos;
     }
-
-
     ManejoArchivos manejoArchivos = new ManejoArchivos();
 
     public ArrayList<RegistroUsuario> getListaUsuarios() {

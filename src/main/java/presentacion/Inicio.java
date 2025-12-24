@@ -1,7 +1,7 @@
 package presentacion;
 
 import dominio.RegistrarCarrera;
-import dominio.RegistroPato;
+import dominio.RegistrarPato;
 import dominio.RegistroUsuario;
 import servicios.ManejoArchivos;
 import servicios.ServicioListaUsuario;
@@ -30,6 +30,7 @@ public class Inicio {
     ManejoArchivos manejoArchivos = new ManejoArchivos();
 
 
+
     //Cargar datos a combosxCarrera
     public void cargarDatosComboBoxCArrera(){
         for(RegistrarCarrera carrera : servicioListaUsuario.getlistCMapasCarrera()){
@@ -42,6 +43,7 @@ public class Inicio {
         comboBoxCarrera.removeAllItems();
         for(RegistrarCarrera carrera : servicioListaUsuario.getlistCMapasCarrera()){
             comboBoxCarrera.addItem(carrera.getNombre());
+
         }
 
     }
@@ -112,11 +114,12 @@ public class Inicio {
                 VentanaCarrera ventanaCarrera = new VentanaCarrera();
                 ventanaCarrera.mostrarVentana();
                 ventanaCarrera.nombreCarrera(nombreCarrera);
+                ventanaCarrera.obtenerJugadores();
+
             }
         });
 
-
-
+        
     }
 
 
