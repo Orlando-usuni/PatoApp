@@ -1,6 +1,7 @@
 package servicios;
 
 import dominio.RegistrarCarrera;
+import dominio.RegistroPato;
 import dominio.RegistroUsuario;
 
 import javax.swing.*;
@@ -120,6 +121,8 @@ public class ManejoArchivos {
         }
 
     }
+    
+
 
     public void cargarDatosCarreras(){
         File archivo = new File("pistas.txt");

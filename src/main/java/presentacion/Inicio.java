@@ -1,6 +1,7 @@
 package presentacion;
 
 import dominio.RegistrarCarrera;
+import dominio.RegistroPato;
 import dominio.RegistroUsuario;
 import servicios.ManejoArchivos;
 import servicios.ServicioListaUsuario;
@@ -111,21 +112,9 @@ public class Inicio {
                 VentanaCarrera ventanaCarrera = new VentanaCarrera();
                 ventanaCarrera.mostrarVentana();
                 ventanaCarrera.nombreCarrera(nombreCarrera);
-                ventanaCarrera.obtenerJugadores();
-
             }
         });
 
-
-        añadirPatoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String nombrePato = JOptionPane.showInputDialog("Registrar nuevo pato \n Nombre:", null);
-                registroPatosVentana.agregarPato(nombrePato);
-
-
-            }
-        });
 
 
     }
