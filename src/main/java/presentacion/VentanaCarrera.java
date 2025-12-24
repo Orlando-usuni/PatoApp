@@ -29,6 +29,10 @@ public class VentanaCarrera {
     private JPanel JPanelMedallas;
     private JPanel JPanelPuestos;
     private JLabel JlabelGanadorv1;
+    private JLabel JlabelUsuario1;
+    public String jugador1;
+    public String jugador2;
+    public String jugador3;
     ServicioListaUsuario servicioListaUsuario = new ServicioListaUsuario();
     String nombreDeLaCarrera;
     String categoria;
@@ -54,9 +58,15 @@ public class VentanaCarrera {
             patoVeloz12(nombre);
             JlabelGanadorv1.setText( "Ganador: "+nombreGanador);
             JPanelMedallas.setVisible(true);
-            if(nombre.equals("MiniMurloc")){
-
+            if (nombre.equals("MiniMurloc")) {
+                JlabelUsuario1.setText(jugador1);
+            } else if (nombre.equals("HechizoVeloz")) {
+                JlabelUsuario1.setText(jugador2);
+            } else if (nombre.equals("ReyLich")) {
+                JlabelUsuario1.setText(jugador3);
             }
+
+
 
 
         }
@@ -114,7 +124,9 @@ public class VentanaCarrera {
             }
         }
         listaSeleccion = servicioListaUsuario.getListaUsuarios();
-
+        jugador1 = nombres[0];
+        jugador2 = nombres[1];
+        jugador3 = nombres[2];
         jLabelJugador1.setText(nombres[0]);
         jLabelJugador2.setText(nombres[1]);
         jLabeljugador3.setText(nombres[2]);

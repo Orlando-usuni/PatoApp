@@ -1,3 +1,4 @@
 MiniPato,Niño,2025-03-10
 Ventormenta,Joven,2025-04-07
 DonPicoDeHierro,Adulto,2025-04-07Piacho,Adulto,23/12/2025
+Picacchu,Joven,23-12-2025

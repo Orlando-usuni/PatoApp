@@ -1,7 +1,6 @@
 package presentacion;
 
 import dominio.RegistrarCarrera;
-import dominio.RegistrarPato;
 import dominio.RegistroUsuario;
 import servicios.ManejoArchivos;
 import servicios.ServicioListaUsuario;
@@ -18,8 +17,8 @@ public class Inicio {
     private JButton btnEstadistica;
     private JButton iniciarCarreraButton;
     private JButton añadirPatoButton;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField textFieldBuscaNombre;
+    private JTextField textFieldBuscarCedula;
     private JButton buscarButton;
     private JTable tblRegistro;
     private JScrollPane JScrollPaneVentana;
@@ -30,7 +29,15 @@ public class Inicio {
     ManejoArchivos manejoArchivos = new ManejoArchivos();
 
 
-
+    public void buscarPersona(String dato){
+        for(RegistroUsuario usuario : servicioListaUsuario.getListaUsuarios()) {
+            if(usuario.getNombre().equals(dato) || usuario.getDocumento().equals(dato)){
+                JOptionPane.showMessageDialog(null, "Nombre:" + usuario.getNombre() +
+                        "\nEdad: " + usuario.getEdad() + "\nCc: " + usuario.getDocumento() +
+                        "\ncategoria: " + usuario.getCategoria());
+            }
+        }
+        }
     //Cargar datos a combosxCarrera
     public void cargarDatosComboBoxCArrera(){
         for(RegistrarCarrera carrera : servicioListaUsuario.getlistCMapasCarrera()){
@@ -119,7 +126,27 @@ public class Inicio {
             }
         });
 
-        
+
+
+
+        buscarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String buscarNombre = textFieldBuscaNombre.getText().trim();
+                String buscadorCc = textFieldBuscarCedula.getText().trim();
+
+                // Se corrigieron los paréntesis y se usa .trim().isEmpty() para mejor validación
+                if (buscarNombre.trim().isEmpty() && buscadorCc.trim().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Error!, Campos Vacíos");
+                } else if (buscadorCc.trim().isEmpty()) {
+                    // Si la cédula está vacía, busca por nombre
+                    buscarPersona(buscarNombre);
+                } else {
+                    // Si la cédula tiene texto, busca por cédula
+                    buscarPersona(buscadorCc);
+                }
+            }
+        });
     }
 
 

@@ -12,3 +12,4 @@ Uther,45,1003330003,Adulto,ReyLich
 
 Orlando,25,1006465223,Niño,MiniMurloc
 Luz pierdad,78,56468494131,Adolecente,MiniMurloc
+Daniel,26,100646521,Niño,MiniMurloc
